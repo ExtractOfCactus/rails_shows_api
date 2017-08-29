@@ -5,6 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+User.delete_all()
 Show.delete_all()
 
-Show.create({title:"Dexter", series: 3, description:"Serial killer Dexter works as a blood spatter expert for the Miami Police", image: "somepath.jpg", programmeID: "SoMeId"})
+s1 = Show.create({title:"Dexter", series: 3, description:"Serial killer Dexter works as a blood spatter expert for the Miami Police", image: "somepath.jpg", programmeID: "SoMeId"})
+
+User.create({name:"Glen", age: 31, show:s1})
